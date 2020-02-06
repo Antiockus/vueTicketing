@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<ul>
+    {% for ticket in tickets %}
+    <li>{{ticket.ticket_title}} - {{ ticket.ticket_description }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

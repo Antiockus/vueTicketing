@@ -1,0 +1,24 @@
+{% extends "layout.html"%}
+
+{% block content %}
+<div class="container">
+    <form class="form" action="../process.php" method="post">
+        <fieldset>
+
+            <input type="hidden" name="hon" value="" />
+            <label for="ticket_title">Ticket Title</label><br>
+            <input type="text" class="form-control" id="ticket_title" name="ticket_title" value="" placeholder="Enter the
+     ticket title*" required /><br>
+            <label for="ticket_description">Describe the ticket issue:</label><br>
+            <textarea name="ticket_description" class="form-control" id="ticket_description" cols="30"
+                rows="10"></textarea><br>
+            <label for="ticket_status">Status</label><br><select name="ticket_status" id="ticket_status">
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+            </select>
+            <input type="hidden" name="value_type" value="ticket">
+            <input type="submit" name="s" value="Create Ticket"></fieldset>
+    </form>
+</div>
+{% endblock%}

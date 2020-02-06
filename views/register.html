@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1>Register</h1>
+            {% if errors %}
+            <p style="color:red;">{{ errors }}</p>
+            {% endif %}
+            <form class="form" action="../register.php" method="POST">
+                <div class="form-group">
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" class="form-control" id="nickname" name="nickname"></div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" name="email" id="email"></div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"></div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" name="confirmPassword"></div>
+                <button type="submit" onclick="confirmPassword()">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function confirmPassword() {
+
+    }
+</script>
+{% endblock %}
